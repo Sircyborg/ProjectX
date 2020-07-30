@@ -12,6 +12,7 @@ class MapReader : MonoBehaviour
     [HideInInspector]
     public OsmBounds bounds;
 
+
     [Tooltip("The resource file that contains the OSM map data")]
     public string resourceFile;
 
@@ -29,7 +30,6 @@ class MapReader : MonoBehaviour
         SetBounds(doc.SelectSingleNode("/osm/bounds"));
         GetNodes(doc.SelectNodes("/osm/node"));
         GetWays(doc.SelectNodes("/osm/way"));
-
         IsReady = true;
     }
 

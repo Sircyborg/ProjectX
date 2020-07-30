@@ -31,7 +31,7 @@ class OsmNode : BaseOsm
         X = (float)MercatorProjection.lonToX(Longitude);
         Y = (float)MercatorProjection.latToY(Latitude);
         XmlNodeList tags = node.SelectNodes("tag");
-        foreach (XmlNode t in tags)
+        foreach (XmlNode t in tags) 
         {
             string key = GetAttribute<string>("k", t.Attributes);
             switch (key)
